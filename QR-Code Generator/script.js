@@ -9,7 +9,11 @@ function generateQR() {
     imgBox.classList.add("show-img");
   } else {
     qrText.classList.add("error");
+    setInterval(() => {
+      qrText.classList.remove("error");
+    }, 2000);
   }
 }
 let btn = document.querySelector("button");
 btn.addEventListener("click", generateQR);
+
