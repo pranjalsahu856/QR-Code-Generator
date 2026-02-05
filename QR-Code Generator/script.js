@@ -17,3 +17,8 @@ function generateQR() {
 let btn = document.querySelector("button");
 btn.addEventListener("click", generateQR);
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    generateQR();
+  }
+});
